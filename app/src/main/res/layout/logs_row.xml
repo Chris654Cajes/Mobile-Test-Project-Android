@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginStart="20dp"
+    android:layout_marginBottom="20dp"
+    android:padding="10dp"
+    android:id="@+id/order_row"
+    android:background="@drawable/rounded_item_yellow">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_button_number"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Button 1 Pressed" />
+
+        <TextView
+            android:id="@+id/txt_event_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="left"
+            android:text="06/08/2022 09:55 PM" />
+
+    </LinearLayout>
+
+</LinearLayout>
