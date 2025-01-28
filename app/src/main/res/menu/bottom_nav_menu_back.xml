@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/btn_view_logs"
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="View Logs"
-        android:icon="@drawable/baseline_log" />
+        android:title="Back to Buttons"
+        android:icon="@drawable/baseline_arrow_back" />
 
 </menu>

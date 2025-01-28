@@ -2,22 +2,24 @@ package com.example.mymobiletestproject;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.view.MenuItem;
 import android.view.View;
+
 import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import DbHelpers.DatabaseHelper;
+
+/*
+    This activity displays a page that displays 4 buttons to add new logs
+*/
 
 public class MainActivity extends AppCompatActivity {
     private Button btn1, btn2, btn3, btn4;
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         btn3 = findViewById(R.id.btn3);
         btn4 = findViewById(R.id.btn4);
 
+        // Add new log for button 1
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Add new log for button 2
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Add new log for button 3
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Add new log for button 4
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.btn_view_logs:
                         Intent homeIntent = new Intent(MainActivity.this, LogsList.class);
                         startActivity(homeIntent);
-                        finish();
                         break;
                 }
 
@@ -79,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // This method adds the product to cart
+    // This method adds the new log in the database
     private void addLog(int buttonNumber) {
         DatabaseHelper dbHelper = new DatabaseHelper(MainActivity.this);
 

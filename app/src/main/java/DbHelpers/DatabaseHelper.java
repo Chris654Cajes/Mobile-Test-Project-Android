@@ -1,21 +1,21 @@
 package DbHelpers;
 
-/*
-    This class implements database structure and the methods to get or update data to/from the database
-*/
-
 import android.content.ContentValues;
 import android.content.Context;
+
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import Models.LogItem;
+
+/*
+    This class implements database structure and the methods to get or add new data to/from the database
+*/
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private Context context;
@@ -53,7 +53,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    // This method is called get order lines form the phone database
+    // This method is called to get logs form the phone database
     public ArrayList<LogItem> getLogs() {
         ArrayList<LogItem> logItems = new ArrayList<>();
 
@@ -80,7 +80,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return logItems;
     }
 
-    // This method is called to add new log when clicking the add to cart button
+    // This method is called to add new log when clicking the button
     public String addLog(int buttonNumber) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();

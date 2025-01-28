@@ -1,6 +1,8 @@
 package Models;
 
-import java.time.LocalDateTime;
+/*
+    This is a structure for a log
+*/
 
 public class LogItem {
     private int id, buttonNumber;
@@ -22,11 +24,7 @@ public class LogItem {
         this.buttonNumber = buttonNumber;
     }
 
-    public String getEventTimeStamp() {
-        return eventTimeStamp;
-    }
+    public String getEventTimeStamp() { return eventTimeStamp; }
 
-    public void setEventTimeStamp(String eventTimeStamp) {
-        this.eventTimeStamp = eventTimeStamp;
-    }
+    public void setEventTimeStamp(String eventTimeStamp) { this.eventTimeStamp = eventTimeStamp; }
 }
